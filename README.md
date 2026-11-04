@@ -27,7 +27,3 @@ O código está organizado nas pastas Model, View, Controller e DAO.
 5. Pressione **F5** para compilar e executar.
 
 Os arquivos `.mdf` e `.ldf` do banco já acompanham o projeto e devem permanecer na pasta do projeto. Não é necessário executar os scripts SQL para começar.
-
-## Autor
-
-Rafael_Dias
