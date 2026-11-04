@@ -1,0 +1,7 @@
+create table Paises(
+	ID_Paises int NOT NULL IDENTITY(10, 1) PRIMARY KEY,
+	Pais Varchar(55) NOT NULL,	
+	Sigla varchar(3),
+	DDI varchar(3),
+	Moeda varchar(4)
+)

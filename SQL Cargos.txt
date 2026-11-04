@@ -1,0 +1,6 @@
+CREATE TABLE Cargos (
+	ID_Cargos INT NOT NULL IDENTITY(100, 1) PRIMARY KEY,
+	Cargo VARCHAR(50),
+	Exige_CNH BIT,
+	Ganha_Comissao BIT
+)

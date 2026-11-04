@@ -1,0 +1,23 @@
+CREATE TABLE Funcionarios (
+	ID_Funcionario INT NOT NULL IDENTITY(10, 1) PRIMARY KEY,
+	Matricula VARCHAR(55),
+	CPF VARCHAR(11) UNIQUE NOT NULL,
+	Nome VARCHAR(55),
+	Idade INT,
+	Sexo VARCHAR(2),
+	Numero_Dependentes INT,
+	Numero_CNH VARCHAR(11),
+	Tipo_CNH CHAR,
+	Data_Validade_CNH DATE,
+	SalarioBase DECIMAL(10,2),
+	Gratificacao DECIMAL(10,2),
+	ID_Cargo INT NOT NULL,
+	ID_Cidade INT NOT NULL,
+	Logradouro VARCHAR(55),
+	Numero VARCHAR(8),
+	Complemento VARCHAR(55),
+	Bairro VARCHAR(55),
+	CEP VARCHAR(55),
+	CONSTRAINT FK_Funcionarios_Cargo FOREIGN KEY (ID_Cargo) REFERENCES Cargos(ID_Cargos),
+	CONSTRAINT FK_Funcionarios_Cidade FOREIGN KEY (ID_Cidade) REFERENCES Cidades(ID_Cidades)
+)

@@ -1,0 +1,45 @@
+INSERT INTO Paises (Pais, Sigla, DDI, Moeda) VALUES
+('Brasil', 'BRA', '+55', 'BRL'),
+('Paraguai', 'PRY', '+595', 'PYG'),
+('Argentina', 'ARG', '+54', 'ARS');
+
+INSERT INTO Estados (ID_Pais, Estado, UF) VALUES
+(10, 'Paraná', 'PR'),
+(10, 'São Paulo', 'SP'),
+(12, 'Misiones', 'MIS');
+
+INSERT INTO Cidades (ID_Estado, Cidade, DDD) VALUES
+(100, 'Foz do Iguaçu', '45'),
+(100, 'Curitiba', '41'),
+(101, 'São Paulo', '11');
+
+INSERT INTO Cargos (Cargo, Exige_CNH, Ganha_Comissao) VALUES
+('Gerente', 1, 1),
+('Zelador', 0, 0),
+('Vendedor', 1, 1);
+
+
+INSERT INTO Funcionarios (
+    Matricula, CPF, Nome, Idade, Sexo, Numero_Dependentes, 
+    Tipo_CNH, Numero_CNH, Data_Validade_CNH, 
+    SalarioBase, Gratificacao, ID_Cargo, ID_Cidade, 
+    Logradouro, Numero, Bairro, CEP
+) VALUES
+(
+    '123', '12345678901', 'Rafael_Dias', 42, 'M', 2,
+    'B', '98765432100', '2028-05-15',
+    8500.00, 1500.00, 100, 1000,
+    'Av. Brasil', '150', 'Centro', '85851-000'
+),
+(
+    '456', '23456789012', 'Maria Aparecida', 38, 'F', 1,
+    NULL, NULL, NULL,
+    2200.00, 0.00, 101, 1001,
+    'Rua das Flores', '320', 'Batel', '80020-000'
+),
+(
+    '789', '34567890123', 'Lucas Silveira', 29, 'M', 0,
+    'A', '12345678900', '2027-11-20',
+    3100.00, 800.00, 102, 1002,
+    'Av. Paulista', '1000', 'Bela Vista', '01310-100'
+);
